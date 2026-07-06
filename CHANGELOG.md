@@ -5,6 +5,24 @@ commit references in parentheses are taken from the file's git history; the
 format loosely follows Keep a Changelog and the protocol's own SemVer rule
 (new rule = minor, clarification = patch, breaking change = major).
 
+## [2.5.0] — 2026-07-06 (TBD)
+### Added
+- Delegation & model economy subsection under Agent Automation Rules: plan
+  strong, execute cheap — design in the main loop, delegate well-specified
+  mechanical work to subagents/cheaper models, run independent pieces in
+  parallel, verify delegated output before presenting it.
+### Changed
+- Explicit winner for the #5 vs #6 conflict: verification beats tool/token
+  economy, using the preamble's explicit-winner escape hatch (aligned with
+  Directive 4's verification > speed precedence).
+- Verification (Directive 6): tool references reworded to prioritize exa
+  semantic-search tools, then fall through to other available tools, instead
+  of hardcoded tool names; merged the no-tool and all-fail cases; added a
+  guard against re-verifying facts already established in-session. Trigger
+  conditions unchanged.
+- Caveman auto-management condensed from ~18 lines to 6; gating, gates,
+  user-override-wins, and deactivate-wins-on-conflict all preserved.
+
 ## [2.4.0] — 2026-06-13 (`32cdac2`)
 ### Added
 - Absolute Rules block above the directives: safety overrides helpfulness;
