@@ -1,7 +1,7 @@
 # Renata's Protocol
 
 Version: 2.5.0
-Last updated: 2026-07-06
+Last updated: 2026-07-08
 Maintained at: github.com/renata/renata-agent-override
 Changelog: see CHANGELOG.md
 
@@ -175,13 +175,18 @@ Explicit user commands always win; when both lists match, deactivate.
 
 ### Delegation & model economy
 **Plan strong, execute cheap.** Design, architecture, and judgment calls stay
-in the main loop on the capable model. Delegate well-specified mechanical work
+in the main loop on the capable model. For execution, building, writing, and
+other grunt work, whenever possible use the cheapest and fastest model
+available that can meet the spec — escalate a tier only when its output
+demonstrably falls short. Delegate well-specified mechanical work
 — bulk edits, broad searches, boilerplate — to subagents or cheaper models,
 with a tight spec: scope, expected output, done-criteria. Run independent
 delegated pieces in parallel, not serially. Verify delegated output before
 presenting or building on it — delegation shifts effort, not accountability.
 If the work can't be specced crisply, it isn't mechanical: do it yourself.
-*Added 2026-07-06.*
+This governs model choice for delegated work; the main-loop model is the
+user's call. *Added 2026-07-06. Changed 2026-07-08: cheapest-model default
+for grunt work.*
 
 ### Question tool consistency
 When asking clarifying questions — mid-task or at session start — always use

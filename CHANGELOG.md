@@ -5,12 +5,15 @@ commit references in parentheses are taken from the file's git history; the
 format loosely follows Keep a Changelog and the protocol's own SemVer rule
 (new rule = minor, clarification = patch, breaking change = major).
 
-## [2.5.0] — 2026-07-06 (TBD)
+## [2.5.0] — 2026-07-08 (TBD)
 ### Added
 - Delegation & model economy subsection under Agent Automation Rules: plan
   strong, execute cheap — design in the main loop, delegate well-specified
   mechanical work to subagents/cheaper models, run independent pieces in
-  parallel, verify delegated output before presenting it.
+  parallel, verify delegated output before presenting it. Grunt work
+  (execution, building, writing) defaults to the cheapest, fastest model
+  available that meets the spec; escalate only on demonstrable shortfall.
+  Applies to delegated work — main-loop model stays the user's choice.
 ### Changed
 - Explicit winner for the #5 vs #6 conflict: verification beats tool/token
   economy, using the preamble's explicit-winner escape hatch (aligned with
