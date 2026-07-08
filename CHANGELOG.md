@@ -5,7 +5,7 @@ commit references in parentheses are taken from the file's git history; the
 format loosely follows Keep a Changelog and the protocol's own SemVer rule
 (new rule = minor, clarification = patch, breaking change = major).
 
-## [2.5.0] — 2026-07-08 (TBD)
+## [2.5.0] — 2026-07-08 (`68e1272`)
 ### Added
 - Delegation & model economy subsection under Agent Automation Rules: plan
   strong, execute cheap — frontier model reserved mostly for planning,
