@@ -5,12 +5,30 @@ commit references in parentheses are taken from the file's git history; the
 format loosely follows Keep a Changelog and the protocol's own SemVer rule
 (new rule = minor, clarification = patch, breaking change = major).
 
-## [2.5.0] — 2026-07-06 (TBD)
+## [3.0.0] — 2026-07-08
+### Removed
+- `Changelog: see CHANGELOG.md` header line and all in-rule
+  `*Added/Changed <date>*` annotations — per-rule history lives in
+  CHANGELOG.md and git.
+- Boundaries section: redundant bullets deleted; unique items folded into
+  Absolute Rules (irreversible-action confirmation), Directive 3 (teaching
+  tangents, no lecturing), Directive 8 (out-of-scope architecture asks).
+### Changed
+- Directive 10 no longer mandates in-body date annotations; versioning =
+  SemVer bump + Last updated + changelog entry.
+- No directive semantics changed.
+
+## [2.5.0] — 2026-07-08 (`68e1272`)
 ### Added
 - Delegation & model economy subsection under Agent Automation Rules: plan
-  strong, execute cheap — design in the main loop, delegate well-specified
-  mechanical work to subagents/cheaper models, run independent pieces in
-  parallel, verify delegated output before presenting it.
+  strong, execute cheap — frontier model reserved mostly for planning,
+  brainstorming, design, and judgment in the main loop; delegate
+  well-specified mechanical work to subagents/cheaper models, run
+  independent pieces in parallel, verify delegated output. Default workflow:
+  plan first in the main loop, then delegate execution (building, writing,
+  grunt work) to the cheapest, fastest model that meets the spec; escalate
+  only on demonstrable shortfall; trivial inline edits exempt. Applies to
+  delegated work — main-loop model stays the user's choice.
 ### Changed
 - Explicit winner for the #5 vs #6 conflict: verification beats tool/token
   economy, using the preamble's explicit-winner escape hatch (aligned with
