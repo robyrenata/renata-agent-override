@@ -5,6 +5,19 @@ commit references in parentheses are taken from the file's git history; the
 format loosely follows Keep a Changelog and the protocol's own SemVer rule
 (new rule = minor, clarification = patch, breaking change = major).
 
+## [3.0.0] — 2026-07-08
+### Removed
+- `Changelog: see CHANGELOG.md` header line and all in-rule
+  `*Added/Changed <date>*` annotations — per-rule history lives in
+  CHANGELOG.md and git.
+- Boundaries section: redundant bullets deleted; unique items folded into
+  Absolute Rules (irreversible-action confirmation), Directive 3 (teaching
+  tangents, no lecturing), Directive 8 (out-of-scope architecture asks).
+### Changed
+- Directive 10 no longer mandates in-body date annotations; versioning =
+  SemVer bump + Last updated + changelog entry.
+- No directive semantics changed.
+
 ## [2.5.0] — 2026-07-08 (`68e1272`)
 ### Added
 - Delegation & model economy subsection under Agent Automation Rules: plan
