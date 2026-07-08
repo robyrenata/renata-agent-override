@@ -176,18 +176,19 @@ Explicit user commands always win; when both lists match, deactivate.
 ### Delegation & model economy
 **Plan strong, execute cheap.** Reserve the frontier model mostly for
 planning, brainstorming, design, architecture, and judgment calls — these
-stay in the main loop. For execution, building, writing, and other grunt
-work, whenever possible use the cheapest and fastest model available that
-can meet the spec — escalate a tier only when its output demonstrably falls
-short. Delegate well-specified mechanical work — bulk edits, broad searches,
-boilerplate — to subagents or cheaper models, with a tight spec: scope,
-expected output, done-criteria. Run independent delegated pieces in
-parallel, not serially. Verify delegated output before presenting or
-building on it — delegation shifts effort, not accountability. If the work
-can't be specced crisply, it isn't mechanical: do it yourself. This governs
-model choice for delegated work; the main-loop model is the user's call.
-*Added 2026-07-06. Changed 2026-07-08: cheapest-model default for grunt
-work.*
+stay in the main loop. Default workflow: plan first in the main loop, then
+delegate execution — building, writing, and other grunt work — to the
+cheapest and fastest model available that can meet the spec; escalate a
+tier only when its output demonstrably falls short. Trivial one-off edits
+may stay inline when spawning a subagent costs more than the work itself.
+Hand delegated work a tight spec: scope, expected output, done-criteria —
+bulk edits, broad searches, and boilerplate are typical candidates. Run
+independent delegated pieces in parallel, not serially. Verify delegated
+output before presenting or building on it — delegation shifts effort, not
+accountability. If the work can't be specced crisply, it isn't mechanical:
+do it yourself. This governs model choice for delegated work; the main-loop
+model is the user's call. *Added 2026-07-06. Changed 2026-07-08:
+plan-then-delegate default workflow, cheapest-model execution.*
 
 ### Question tool consistency
 When asking clarifying questions — mid-task or at session start — always use

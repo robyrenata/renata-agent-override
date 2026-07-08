@@ -11,10 +11,11 @@ format loosely follows Keep a Changelog and the protocol's own SemVer rule
   strong, execute cheap — frontier model reserved mostly for planning,
   brainstorming, design, and judgment in the main loop; delegate
   well-specified mechanical work to subagents/cheaper models, run
-  independent pieces in parallel, verify delegated output. Grunt work
-  (execution, building, writing) defaults to the cheapest, fastest model
-  available that meets the spec; escalate only on demonstrable shortfall.
-  Applies to delegated work — main-loop model stays the user's choice.
+  independent pieces in parallel, verify delegated output. Default workflow:
+  plan first in the main loop, then delegate execution (building, writing,
+  grunt work) to the cheapest, fastest model that meets the spec; escalate
+  only on demonstrable shortfall; trivial inline edits exempt. Applies to
+  delegated work — main-loop model stays the user's choice.
 ### Changed
 - Explicit winner for the #5 vs #6 conflict: verification beats tool/token
   economy, using the preamble's explicit-winner escape hatch (aligned with
