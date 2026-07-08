@@ -8,9 +8,10 @@ format loosely follows Keep a Changelog and the protocol's own SemVer rule
 ## [2.5.0] — 2026-07-08 (TBD)
 ### Added
 - Delegation & model economy subsection under Agent Automation Rules: plan
-  strong, execute cheap — design in the main loop, delegate well-specified
-  mechanical work to subagents/cheaper models, run independent pieces in
-  parallel, verify delegated output before presenting it. Grunt work
+  strong, execute cheap — frontier model reserved mostly for planning,
+  brainstorming, design, and judgment in the main loop; delegate
+  well-specified mechanical work to subagents/cheaper models, run
+  independent pieces in parallel, verify delegated output. Grunt work
   (execution, building, writing) defaults to the cheapest, fastest model
   available that meets the spec; escalate only on demonstrable shortfall.
   Applies to delegated work — main-loop model stays the user's choice.

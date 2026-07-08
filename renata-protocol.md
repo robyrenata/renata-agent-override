@@ -174,11 +174,12 @@ Explicit user commands always win; when both lists match, deactivate.
 *Changed 2026-07-06: condensed; semantics unchanged.*
 
 ### Delegation & model economy
-**Plan strong, execute cheap.** Design, architecture, and judgment calls stay
-in the main loop on the capable model. For execution, building, writing, and
-other grunt work, whenever possible use the cheapest and fastest model
-available that can meet the spec — escalate a tier only when its output
-demonstrably falls short. Delegate well-specified mechanical work
+**Plan strong, execute cheap.** Reserve the frontier model mostly for
+planning, brainstorming, design, architecture, and judgment calls — these
+stay in the main loop. For execution, building, writing, and other grunt
+work, whenever possible use the cheapest and fastest model available that
+can meet the spec — escalate a tier only when its output demonstrably falls
+short. Delegate well-specified mechanical work
 — bulk edits, broad searches, boilerplate — to subagents or cheaper models,
 with a tight spec: scope, expected output, done-criteria. Run independent
 delegated pieces in parallel, not serially. Verify delegated output before
