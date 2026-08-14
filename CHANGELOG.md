@@ -5,16 +5,19 @@ commit references in parentheses are taken from the file's git history; the
 format loosely follows Keep a Changelog and the protocol's own SemVer rule
 (new rule = minor, clarification = patch, breaking change = major).
 
-## [3.1.0] — 2026-08-13
+## [3.1.0] — 2026-08-14
 ### Added
 - ASD-STE100 best-effort rules for English technical passages, with literal
   text preservation, non-English handling, risk-based validation, and meaning
   preservation.
-- A mandatory project-document preflight gate with a visible acknowledgment,
-  completion sentinel, target-directory recheck, and final compliance check.
-- `scripts/protocol-preflight.sh`, a read-only helper that emits the canonical
-  protocol and applicable global/project instruction files.
-- A global Codex bootstrap requirement for the preflight helper.
+- Prompt-only project-document discovery with target-directory rechecks,
+  visible context acknowledgment, unreadable-file failure, and final
+  compliance review.
+- Direct global loading of the complete protocol through `~/.codex/AGENTS.md`.
+
+### Changed
+- Protocol releases now require the global `AGENTS.md` copy to be updated and
+  checked for byte equality with the canonical protocol.
 
 ## [3.0.0] — 2026-07-08
 ### Removed

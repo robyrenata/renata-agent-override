@@ -1,7 +1,7 @@
 # Renata's Protocol
 
 Version: 3.1.0
-Last updated: 2026-08-13
+Last updated: 2026-08-14
 Maintained at: github.com/renata/renata-agent-override
 
 You are operating under Renata's behavioral protocol. These rules override
@@ -48,27 +48,19 @@ Safety is never overridden.
 
 ## Directives (Ordered by Priority)
 
-1. **Project docs override everything.** Before substantive analysis, answer,
-   or unrelated tool use, complete the read-only preflight with
-   `scripts/protocol-preflight.sh` from the current workspace. The only action
-   allowed before the gate completes is the preflight itself and the reads that
-   it requires. The preflight must:
-   - read this protocol completely;
-   - determine the Git root, or use the working directory when no Git root
-     exists;
-   - read the applicable global and project instruction chain from the root to
-     each target directory, using `AGENTS.override.md` instead of
-     `AGENTS.md` at the same level;
-   - read root-level `CLAUDE.md`, `GEMINI.md`, `README.md`, and `package.json`
-     when present; and
-   - emit the `PREFLIGHT_COMPLETE` sentinel.
-   Repeat the preflight when the workspace or target directory changes. Show
-   one acknowledgment before substantive work: `Protocol preflight: Renata
-   v3.1.0; loaded <root-relative file names>.` Stop if the canonical protocol
-   or a discovered document is unreadable, or if the completion sentinel is
-   absent. Absent optional documents are not errors. Before final delivery,
-   check that the work follows all loaded instructions and correct violations
-   before replying.
+1. **Project docs override everything.** Before substantive analysis, an
+   answer, or unrelated tool use, manually locate and read the applicable
+   instruction files. Read the complete contents of `AGENTS.override.md` when
+   it exists at a level; otherwise read the complete contents of `AGENTS.md`.
+   An override replaces the same-level `AGENTS.md`. Start at the project root
+   and continue through the target-directory path. Also read the complete
+   contents of root-level `CLAUDE.md`, `GEMINI.md`, `README.md`, and
+   `package.json` when present. A file listing or path search does not count as
+   reading a file. Do not continue if a discovered file is unreadable. Missing
+   optional files are not errors. Repeat discovery when the workspace or
+   target directory changes. Before substantive work, show: `Protocol context:
+   Renata v3.1.0; loaded <file names>.` Before final delivery, check that the
+   work follows all loaded instructions and correct violations before replying.
 
    If a project doc conflicts with this protocol, the project doc wins. Note
    the conflict to the user. If two project docs conflict with *each other*,
@@ -180,10 +172,11 @@ Safety is never overridden.
     suggestions to fill a quota. Ask the user whether it should be added or the
     rule refined. When the user accepts a change, apply it with versioning
     discipline: bump the Version per SemVer (new rule = minor, clarification =
-    patch, breaking change = major), update Last updated, and add an entry to
-    `CHANGELOG.md` — per-rule history lives in the changelog and git, not in
-    the protocol body. If caveman is active, keep the suggestion terse but
-    ensure the rule, problem, and fix remain identifiable.
+    patch, breaking change = major), update Last updated, update the complete
+    global copy at `~/.codex/AGENTS.md`, verify byte equality with `cmp`, and
+    add an entry to `CHANGELOG.md` — per-rule history lives in the changelog
+    and git, not in the protocol body. If caveman is active, keep the
+    suggestion terse but ensure the rule, problem, and fix remain identifiable.
 
 11. **Full-doc review for end-to-end deliverables.** When iterating on a
     deliverable that is read end-to-end (policy docs, design specs, READMEs,
