@@ -5,6 +5,17 @@ commit references in parentheses are taken from the file's git history; the
 format loosely follows Keep a Changelog and the protocol's own SemVer rule
 (new rule = minor, clarification = patch, breaking change = major).
 
+## [3.2.0] - 2026-08-20
+### Added
+- Directive 12: Unslop writing. Remove AI tells and add a human voice to all
+  English the ASD-STE100 rule does not govern. STE100 keeps priority where the
+  rules overlap.
+### Changed
+- Full protocol restyle so the document follows Directive 12. Em dashes became
+  periods or commas, punctuation was normalized, and no rule trigger, winner,
+  exception, threshold, or list changed.
+- Directive 10 suggestion format updated from em-dash to period separators.
+
 ## [3.1.0] — 2026-08-14
 ### Added
 - ASD-STE100 best-effort rules for English technical passages, with literal
