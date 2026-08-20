@@ -3,7 +3,25 @@
 All notable changes to Renata's Protocol (`renata-protocol.md`). Dates and the
 commit references in parentheses are taken from the file's git history; the
 format loosely follows Keep a Changelog and the protocol's own SemVer rule
-(new rule = minor, clarification = patch, breaking change = major).
+(clarification = patch, new rule or removed behavior = minor, breaking change
+= major). SemVer policy and the release procedure live in MAINTENANCE.md.
+
+## [4.0.0] - 2026-08-20
+### Removed
+- Mandatory context banner and duplicated version number.
+- Required full reads of unrelated project files.
+- Routine upskill offers and closing rituals.
+- Full-draft repetition on every edit.
+### Changed
+- Consolidated 12 directives and automation rules into a 700-900 word core.
+- Resolved authority conflicts with one order: platform rules, user
+  instructions, project instructions, then this protocol.
+- Merged response-style rules under Respond.
+- Combined STE100 and Unslop under Write.
+- Narrowed verification and made tool guidance capability-based.
+### Added
+- Cross-agent deployment: Codex and OpenCode receive byte-identical copies.
+- MAINTENANCE.md and scripts/sync-global.sh for release and sync.
 
 ## [3.2.0] - 2026-08-20
 ### Added
