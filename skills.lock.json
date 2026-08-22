@@ -1,0 +1,38 @@
+{
+  "version": "1.0.0",
+  "skills": [
+    {
+      "name": "caveman",
+      "repository_url": "https://github.com/JuliusBrussee/caveman",
+      "subdirectory": "skills/caveman",
+      "branch": "main",
+      "commit_sha": "2f49f0e1a352aa810e70056b7930aeb0b3d219b4",
+      "license": "MIT",
+      "content_checksum_sha256": "a3758cc0ac05c1a6517efde0b6805108eacf6d326555cd38c9daacb00f36196d",
+      "checksum_method": "sha256 of sha256-sorted file list (each file hashed then concatenated and re-hashed)",
+      "allowed_paths": ["SKILL.md", "README.md"]
+    },
+    {
+      "name": "unslop",
+      "repository_url": "https://github.com/cursor/plugins",
+      "subdirectory": "pstack/skills/unslop",
+      "branch": "main",
+      "commit_sha": "46125561306434d8a1d7745d540d8932ab0cd2a2",
+      "license": "MIT",
+      "content_checksum_sha256": "5d716586c991b0376411b69c6ca3b2cbf242a1e84de930295e81a2bacb3438fc",
+      "checksum_method": "sha256 of sha256-sorted file list (each file hashed then concatenated and re-hashed)",
+      "allowed_paths": ["SKILL.md"]
+    },
+    {
+      "name": "asd-ste100",
+      "repository_url": "https://github.com/danyuchn/asd-ste100-skill",
+      "subdirectory": "",
+      "branch": "master",
+      "commit_sha": "d5ce157870cf9c41efd1d6e836706a2be3c7b9da",
+      "license": "MIT",
+      "content_checksum_sha256": "d7889fdc091f7a2ee4220e6373357c003221d3c14f80bf9b3cc85ae0e9e7e249",
+      "checksum_method": "sha256 of sha256-sorted file list (each file hashed then concatenated and re-hashed)",
+      "allowed_paths": ["SKILL.md", "README.md", "LICENSE", "references/writing-rules.md", "examples/before-after.md"]
+    }
+  ]
+}

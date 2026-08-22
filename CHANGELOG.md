@@ -7,6 +7,23 @@ format loosely follows Keep a Changelog and the protocol's own SemVer rule
 = major). SemVer policy and the release procedure live in MAINTENANCE.md.
 
 ## [4.0.0] - 2026-08-20
+
+## [5.0.0] - 2026-08-22
+### Removed
+- Built-in Write section with inline Unslop and STE100 directives.
+- Manual Caveman auto-management rules.
+### Changed
+- Replaced inline prose rules with upstream skill routing.
+- Raised MAINTENANCE.md word cap from 700-900 to 700-1000.
+- Moved from silent Caveman activation to explicit skill matrix.
+### Added
+- Evidence section: always-on fact-based claim policy and classification.
+- Conversation section: four gap types and evidence-gated protocol loop.
+- Skills section: routing matrix, conflict precedence, and guardrails.
+- skills.lock.json: pinned upstream SHAs, checksums, allowed paths.
+- scripts/manage-skills.sh: reproducible installer with allowlist checks.
+
+## [4.0.0] - 2026-08-20
 ### Removed
 - Mandatory context banner and duplicated version number.
 - Required full reads of unrelated project files.
