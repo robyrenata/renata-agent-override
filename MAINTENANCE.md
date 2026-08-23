@@ -16,13 +16,17 @@ This file is for maintainers. It is not part of the injected prompt.
    700 to 1000 words.
 2. Add a CHANGELOG.md entry with Added, Changed, and Removed bullets. If
    upstream skill versions changed, include their new commit SHAs.
-3. Validate the protocol. See the checks below.
-4. Review upstream changes: scripts/manage-skills.sh --refresh-lock. Inspect
+3. Run scripts/validate.sh. It enforces word count, version and date
+   formats, punctuation policy, changelog ordering, lockfile structure, and
+   shell syntax.
+4. Review upstream changes: scripts/manage-skills.sh --check-updates (alias:
+   --refresh-lock). Inspect
    each changed skill for new files, hooks, network calls, executables, and
    license changes before updating skills.lock.json.
 5. Validate installed skills: scripts/manage-skills.sh --check
 6. Sync global copies: scripts/sync-global.sh --apply --check
-7. Commit with a conventional message, such as feat(protocol): ...
+7. Run tests/run-tests.sh. All tests must pass before commit.
+8. Commit with a conventional message, such as feat(protocol): ...
 
 ## Global targets
 
@@ -31,8 +35,15 @@ This file is for maintainers. It is not part of the injected prompt.
 
 ## Validation checks
 
-wc -w renata-protocol.md
-rg -n '[\u2014\u2013\u201c\u201d\u2018\u2019]' renata-protocol.md
-python3 -m json.tool skills.lock.json >/dev/null
-scripts/manage-skills.sh --check
-scripts/sync-global.sh --check
+bash scripts/validate.sh
+bash scripts/manage-skills.sh --check
+bash scripts/sync-global.sh --check
+bash tests/run-tests.sh
+
+## Checksum scheme
+
+Skill checksums bind top-level file contents and normalized relative paths:
+a SHA-256 over sorted lines of "<file sha256>  <relative path>". The nested
+content directories examples/ and references/ are excluded so documentation
+updates do not force a lockfile bump. Regenerate checksums by recomputing
+this value over the installed skill directory after a reviewed update.

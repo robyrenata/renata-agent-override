@@ -8,9 +8,12 @@
       "branch": "main",
       "commit_sha": "2f49f0e1a352aa810e70056b7930aeb0b3d219b4",
       "license": "MIT",
-      "content_checksum_sha256": "a3758cc0ac05c1a6517efde0b6805108eacf6d326555cd38c9daacb00f36196d",
-      "checksum_method": "sha256 of sha256-sorted file list (each file hashed then concatenated and re-hashed)",
-      "allowed_paths": ["SKILL.md", "README.md"]
+      "content_checksum_sha256": "feb18c7ec4aa8a1d7257b6f82908a7be0f77c788dc1f3ecda1ddca38d3e902ca",
+      "checksum_method": "sha256 over sorted '<file-sha256>  <relative-path>' lines (paths bound)",
+      "allowed_paths": [
+        "SKILL.md",
+        "README.md"
+      ]
     },
     {
       "name": "unslop",
@@ -19,9 +22,11 @@
       "branch": "main",
       "commit_sha": "46125561306434d8a1d7745d540d8932ab0cd2a2",
       "license": "MIT",
-      "content_checksum_sha256": "5d716586c991b0376411b69c6ca3b2cbf242a1e84de930295e81a2bacb3438fc",
-      "checksum_method": "sha256 of sha256-sorted file list (each file hashed then concatenated and re-hashed)",
-      "allowed_paths": ["SKILL.md"]
+      "content_checksum_sha256": "a92d37f78bfd5ddb7fe032c55dabf1ec391a6379b216b2792d6b2e2d67887208",
+      "checksum_method": "sha256 over sorted '<file-sha256>  <relative-path>' lines (paths bound)",
+      "allowed_paths": [
+        "SKILL.md"
+      ]
     },
     {
       "name": "asd-ste100",
@@ -30,9 +35,16 @@
       "branch": "master",
       "commit_sha": "d5ce157870cf9c41efd1d6e836706a2be3c7b9da",
       "license": "MIT",
-      "content_checksum_sha256": "d7889fdc091f7a2ee4220e6373357c003221d3c14f80bf9b3cc85ae0e9e7e249",
-      "checksum_method": "sha256 of sha256-sorted file list (each file hashed then concatenated and re-hashed)",
-      "allowed_paths": ["SKILL.md", "README.md", "LICENSE", "references/writing-rules.md", "examples/before-after.md"]
+      "content_checksum_sha256": "afe504a1c77f62db153d048a0777f2254026a58abdec7180c93053ddea9fe6dc",
+      "checksum_method": "sha256 over sorted '<file-sha256>  <relative-path>' lines (paths bound)",
+      "allowed_paths": [
+        "SKILL.md",
+        "README.md",
+        "LICENSE",
+        "references/writing-rules.md",
+        "examples/before-after.md"
+      ]
     }
-  ]
+  ],
+  "checksum_scheme": "v2"
 }

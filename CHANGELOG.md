@@ -6,7 +6,32 @@ format loosely follows Keep a Changelog and the protocol's own SemVer rule
 (clarification = patch, new rule or removed behavior = minor, breaking change
 = major). SemVer policy and the release procedure live in MAINTENANCE.md.
 
-## [4.0.0] - 2026-08-20
+## [6.0.0] - 2026-08-23
+### Changed
+- Optimized for reliable autonomy with visible evidence labels at claim-group
+  granularity (Established, Verified, Inference, Recommendation, Unknown).
+- One direct authoritative source verifies a claim; corroboration is for
+  disputed or indirectly provable claims.
+- Secret-bearing files are out of scope by default, with explicit permission,
+  field-minimal reads, and no value reproduction.
+- Personal-data rule allows necessary public or user-supplied identity data
+  and minimizes private or unrelated personal data.
+- Confirmation required only for material loss, production changes, money
+  movement, and broad destructive commands; scoped disposable cleanup allowed.
+- Caveman lite auto-routing uses an objective gate: no tool, clarification,
+  procedure, or consequential decision.
+- Protocol proposals trigger at completion or blocking of a substantive task;
+  persisted preferences apply to the conversation unless the platform extends
+  them.
+- Delegation is optional and platform-governed; next steps appear only when
+  unfinished work, blockers, or meaningful follow-ups exist.
+
+### Added
+- Established evidence label for stable general knowledge.
+- Evidence-label exemptions for non-claim content.
+
+### Removed
+- Four-gap taxonomy and always-two-source corroboration rule.
 
 ## [5.0.0] - 2026-08-22
 ### Removed

@@ -1,0 +1,16 @@
+name: validate
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Deterministic validation (no network)
+        run: bash scripts/validate.sh
+      - name: Script test suite (no network)
+        run: bash tests/run-tests.sh
