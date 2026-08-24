@@ -6,6 +6,25 @@ format loosely follows Keep a Changelog and the protocol's own SemVer rule
 (clarification = patch, new rule or removed behavior = minor, breaking change
 = major). SemVer policy and the release procedure live in MAINTENANCE.md.
 
+## [6.1.0] - 2026-08-24
+### Added
+- Project-context gate: before substantive repository work, load applicable
+  `AGENTS.md` files in chain, the running agent's native document (for
+  example `CLAUDE.md` or `GEMINI.md`), and the root README. For large
+  READMEs, map headings first, then read the overview plus task, setup,
+  constraints, and validation sections.
+- Document precedence when rules conflict: platform and safety, explicit user
+  instructions, the running agent's native document, the closest applicable
+  `AGENTS` file, the README, then this protocol. README context never
+  overrides binding instructions.
+- Recheck policy: reuse loaded context while the worktree, repository, and
+  target directory are unchanged; re-run discovery when any of them change.
+  Mention loaded files only when they shape the approach, conflict, or are
+  unreadable.
+- Unreadable-file policy: stop if an applicable instruction file cannot be
+  read; warn and continue when only the README is unreadable. Secret-bearing
+  files and dependency or build directories stay out of normal scans.
+
 ## [6.0.0] - 2026-08-23
 ### Changed
 - Optimized for reliable autonomy with visible evidence labels at claim-group
