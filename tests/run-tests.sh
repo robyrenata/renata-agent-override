@@ -153,9 +153,9 @@ pass "duplicate changelog release rejected"
 # --- pinned-SHA fetch from a local fixture repository ----------------------
 
 UPSTREAM="$TMP_ROOT/upstream.git"
-git init -q --bare "$UPSTREAM"
+git init -q --bare --initial-branch=main "$UPSTREAM"
 WORK="$TMP_ROOT/work"
-git init -q "$WORK"
+git init -q --initial-branch=main "$WORK"
 git -C "$WORK" remote add origin "$UPSTREAM"
 cat > "$WORK/SKILL.md" <<'EOF'
 ---
