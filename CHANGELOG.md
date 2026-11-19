@@ -6,6 +6,22 @@ format loosely follows Keep a Changelog and the protocol's own SemVer rule
 (clarification = patch, new rule or removed behavior = minor, breaking change
 = major). SemVer policy and the release procedure live in MAINTENANCE.md.
 
+## [6.2.0] - 2026-11-19
+### Added
+- Account for supplied sources and relevant tabs before reporting totals or
+  completing a review.
+- Check the user-visible result before first delivery. Check one representative
+  result before repeating an operation. Report limits when a check is blocked.
+
+### Changed
+- Use the user's firsthand meeting account, preserve decision status, and
+  apply corrections across requested deliverables.
+- Restrict secrets by content. Filter diagnostic output before it enters the
+  transcript and report credential presence without values.
+- Inspect supplied evidence before asking. Match detail to the recipient's
+  next action and keep drafting instructions outside the deliverable.
+- Condense existing guidance to stay within the protocol word limit.
+
 ## [6.1.0] - 2026-08-24
 ### Added
 - Project-context gate: before substantive repository work, load applicable
